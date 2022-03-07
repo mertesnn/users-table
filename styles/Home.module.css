@@ -1,0 +1,23 @@
+.footer {
+  position: sticky;
+  top: 100vh;
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+}
+
+.socialIcons {
+  font-size: 2rem;
+}
+
+.navbar {
+  padding: 10px 25px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.navbar a {
+  margin-left: 2rem;
+  transition: all 0.5s;
+}
