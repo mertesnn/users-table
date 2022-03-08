@@ -21,3 +21,15 @@
   margin-left: 2rem;
   transition: all 0.5s;
 }
+
+.container {
+  max-width: 80%;
+  margin: auto;
+}
+
+.notFound {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
