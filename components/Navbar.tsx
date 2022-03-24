@@ -11,6 +11,9 @@ const Navbar = () => {
       <Link href="/users">
         <a>All Users</a>
       </Link>
+      <Link href="/table">
+        <a>Table</a>
+      </Link>
     </nav>
   );
 };

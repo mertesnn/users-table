@@ -1,10 +1,10 @@
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/router'
 
 const User = () => {
-  const router = useRouter();
-  const { id } = router.query;
+    const router = useRouter()
+    const { id } = router.query
 
-  return <div>user {id}</div>;
-};
+    return <div>user {id}</div>
+}
 
-export default User;
+export default User
