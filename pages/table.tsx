@@ -1,32 +1,6 @@
 import axios from 'axios'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Column, useTable } from 'react-table'
-
-type TableData = {
-    name: string
-    email: string
-    gender: string
-    status: string
-}
-
-type Users = {
-    users: {
-        id: number
-        name: string
-        email: string
-        gender: string
-        status: string
-    }[]
-    pagination: {
-        pages: number
-        page: number
-        links: {
-            previous: string
-            current: string
-            next: string
-        }
-    }
-}
 
 export const getStaticProps = async () => {
     const { data } = await axios.get('https://gorest.co.in/public/v1/users')
@@ -36,16 +10,14 @@ export const getStaticProps = async () => {
 }
 
 const Table = ({ users, pagination }: Users) => {
-    const asd: Users['users'] = []
-
-    users.forEach((item) => {
-        asd.push(item)
-    })
-
-    const data = React.useMemo(() => asd, [])
+    const data = React.useMemo(() => users, [users])
 
     const columns: Column<TableData>[] = React.useMemo(
         () => [
+            {
+                Header: '#',
+                accessor: 'id',
+            },
             {
                 Header: 'Name',
                 accessor: 'name',
